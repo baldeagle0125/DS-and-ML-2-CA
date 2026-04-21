@@ -1,5 +1,7 @@
 # Virtual Environment
 venv/
+.venv/
+.venv-tf/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
