@@ -145,3 +145,66 @@ This document tracks practical progress for the semester 2 portfolio.
   - Preliminary package clearly shows completed Notebook 01 and in-progress scope for Notebooks 02-04.
 - Reflection/next action:
   - Address feedback and finalize for end-of-semester submission.
+
+### Week of 2026-03-30
+
+- Task:
+  - Expand Notebook 01 to compare synthetic and real data, then rerun with current outputs.
+- Changes made:
+  - Downloaded UCI Student Performance dataset (`data/raw/student-mat.csv`).
+  - Added real-data preprocessing and tuned KNN/SVM workflow in Notebook 01.
+  - Saved processed real dataset to `data/processed/student_performance_real_processed.csv`.
+  - Recorded comparison metrics:
+    - Real KNN accuracy `0.570`, ROC-AUC `0.485`.
+    - Real SVM accuracy `0.709`, ROC-AUC `0.702`.
+    - Synthetic KNN accuracy `0.533`, ROC-AUC `0.440`.
+    - Synthetic SVM accuracy `0.617`, ROC-AUC `0.416`.
+  - Saved `results/figures/01_synthetic_vs_real_comparison.png`.
+  - Regenerated dataset and saved to `data/processed/student_retention_dataset_v2.csv`.
+  - Rerun outputs:
+    - K-Means silhouette (k=3): `0.099`.
+    - Best params: KNN `{n_neighbors: 3, weights: uniform}`, SVM `{C: 5.0, kernel: rbf}`.
+    - Test metrics table: KNN accuracy `0.533`, ROC-AUC `0.440`; SVM accuracy `0.617`, ROC-AUC `0.416`.
+- Practical impact:
+  - Added a clear synthetic-vs-real baseline comparison and refreshed reproducible Notebook 01 outputs.
+- Reflection/next action:
+  - Proceed to ANN improvements in Notebook 02.
+
+### Week of 2026-04-06
+
+- Task:
+  - Upgrade and rerun Notebook 02 ANN baseline with architecture comparison.
+- Changes made:
+  - Tested architectures: `(16,)`, `(32, 16)`, `(64, 32)`.
+  - Selected best by ROC-AUC: `(32, 16)` with ROC-AUC `0.562`.
+  - Reported best-model metrics: test accuracy `0.675`, minority-class F1 `0.05`, train-test gap `0.002`.
+  - Saved `results/figures/02_ann_diagnostics.png`.
+- Practical impact:
+  - Established a stronger ANN baseline and documented diagnostics for model behavior.
+- Reflection/next action:
+  - Continue with deep learning implementation in Notebook 03.
+
+### Week of 2026-04-13
+
+- Task:
+  - Upgrade Notebook 03 from placeholder to a conditional deep-learning workflow.
+- Changes made:
+  - Implemented conditional execution path for deep learning sections.
+- Practical impact:
+  - Preserved notebook usability by making execution behavior explicit for the active environment.
+- Reflection/next action:
+  - Complete RL notebook and consolidate documentation for submission readiness.
+
+### Week of 2026-04-20
+
+- Task:
+  - Upgrade Notebook 04 with Q-learning, rerun results, and complete documentation review.
+- Changes made:
+  - Implemented and reran Q-learning workflow in Notebook 04.
+  - Reported performance: learned policy mean reward `4.700` vs random policy `2.029`.
+  - Saved `results/figures/04_q_learning_results.png`.
+  - Consolidated documentation and completed submission-readiness review.
+- Practical impact:
+  - Finalized reinforcement learning evidence and improved overall portfolio coherence.
+- Reflection/next action:
+  - Prepare final submission package and presentation narrative.
