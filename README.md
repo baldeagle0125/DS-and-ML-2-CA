@@ -103,7 +103,7 @@ DS-and-ML-2-CA/
 
 ### Prerequisites
 
-Ensure Python 3.x is installed.
+Ensure Python 3.12 is installed (TensorFlow support is validated on this version).
 
 ### Running the Portfolio
 
@@ -117,9 +117,11 @@ cd DS-and-ML-2-CA
 2. Create and activate virtual environment:
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 ```
+
+This repository uses a single environment only: `.venv`.
 
 3. Install dependencies:
 
@@ -127,7 +129,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Launch Jupyter and run notebooks in order:
+4. Verify TensorFlow is available in the same environment:
+
+```bash
+python -c "import tensorflow as tf; print(tf.__version__)"
+```
+
+5. Launch Jupyter and run notebooks in order:
 
 ```bash
 jupyter notebook
